@@ -1,0 +1,197 @@
+{
+  "verbose": 1,
+  "id": "OSSL-LUCAS-SE_20230830",
+  "name": "OSSL-LUCAS-SE",
+  "userId": "thomasg",
+  "importVersion": "OSSL-202308",
+  "campaign": {
+    "campaignShortId": "OSSL-LUCAS-SE",
+    "campaignType": "laboratory",
+    "theme": "soil",
+    "product": "diffuse reflectance",
+    "units": "fraction",
+    "geoRegion": "Sweden"
+  },
+  "input": {
+    "jsonSpectraDataFilePath": "/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS/arranged-data/visnir/OSSL-LUCAS-SE_460-1050_10/data-visnir_LUCAS_460-1050_10.json",
+
+    "jsonSpectraParamsFilePath": "/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS/arranged-data/visnir/OSSL-LUCAS-SE_460-1050_10/params-visnir_LUCAS_460-1050_10.json"
+  },
+  "spectraPlot": {
+    "apply": true,
+    "singles": {
+      "figSize": {
+        "x": 8,
+        "y": 6
+      }
+    },
+    "duals": {
+      "figSize": {
+        "x": 8,
+        "y": 8
+      }
+    },
+    "screenDraw": true,
+    "savePng": true,
+    "supTitle": "auto",
+    "raw": {
+      "apply": true,
+      "axisLabel": {
+        "x": "Wavelength (nm)",
+        "y": "reflectance"
+      },
+      "yLim": {
+        "yMin": 0,
+        "yMax": 0.6
+      },
+      "title": {
+        "x": 0,
+        "y": 0,
+        "title": "Original spectra"
+      },
+      "text": {
+        "x": 0.02,
+        "y": 0.8,
+        "bandWidth": true,
+        "samples": true,
+        "skipStep": true,
+        "text": ""
+      }
+    },
+    "derivatives": {
+      "apply": true,
+      "axisLabel": {
+        "x": "Wavelength (nm)",
+        "y": "derivate"
+      },
+      "yLim": {
+        "yMin": 0,
+        "yMax": 0
+      },
+      "title": {
+        "x": 0,
+        "y": 0,
+        "title": "Derivates"
+      },
+      "text": {
+        "x": 0.6,
+        "y": 0.8,
+        "bandWidth": false,
+        "samples": false,
+        "skipStep": false,
+        "text": "Derivate"
+      }
+    },
+    "xLim": {
+      "xMin": 465,
+      "xMax": 1045
+    },
+    "colorRamp": "jet",
+    "maxSpectra": 500,
+    "legend": false,
+    "tightLayout": true,
+    "scatter": {
+      "size": 50
+    }
+  },
+  "featurePlot": {
+    "targetFeatures": [
+      "cec_usda.a723_cmolc.kg",
+      "ec_usda.a364_ds.m",
+      "k.ext_usda.a725_cmolc.kg",
+      "n.tot_usda.a623_w.pct",
+      "oc_usda.c729_w.pct",
+      "ph.h2o_usda.a268_index",
+      "clay.tot_usda.a334_w.pct",
+      "silt.tot_usda.c62_w.pct",
+      "sand.tot_usda.c60_w.pct"
+    ],
+    "histogram": true,
+    "bins": 10,
+    "boxWhisker": true,
+    "targetFeatureSymbols": {
+      "caco3_usda.a54_w.pct": {
+        "color": "whitesmoke",
+        "label": "CaCo3",
+        "unit": "percent"
+      },
+      "cec_usda.a723_cmolc.kg": {
+        "color": "seagreen",
+        "label": "Cation Exc. Cap.",
+        "unit": "mol*kg-1"
+      },
+      "cf_usda.c236_w.pct": {
+        "color": "sienna",
+        "label": "Crane fraction",
+        "unit": "percent"
+      },
+      "clay.tot_usda.a334_w.pct": {
+        "color": "tan",
+        "label": "Clay cont.",
+        "unit": "percent"
+      },
+      "ec_usda.a364_ds.m": {
+        "color": "dodgerblue",
+        "label": "Electric cond.",
+        "unit": "ms*m'-1"
+      },
+      "k.ext_usda.a725_cmolc.kg": {
+        "color": "lightcyan",
+        "label": "Potassion (K)",
+        "unit": "mol*kg-1"
+      },
+      "n.tot_usda.a623_w.pct": {
+        "color": "darkcyan",
+        "label": "Nitrogen (N) [tot]",
+        "unit": "percent"
+      },
+      "oc_usda.c729_w.pct": {
+        "color": "dimgray",
+        "label": "Organic carbon (C)",
+        "unit": "percent"
+      },
+      "p.ext_usda.a274_mg.kg": {
+        "color": "firebrick",
+        "label": "Phosphorus (P)",
+        "unit": "mg*kg-1"
+      },
+      "ph.cacl2_usda.a481_index": {
+        "color": "lemonchiffon",
+        "label": "pH (CaCl)",
+        "unit": "pH"
+      },
+      "ph.h2o_usda.a268_index": {
+        "color": "lightyellow",
+        "label": "pH (H20)",
+        "unit": "pH"
+      },
+      "sand.tot_usda.c60_w.pct": {
+        "color": "orange",
+        "label": "Sand cont.",
+        "unit": "percent"
+      },
+      "silt.tot_usda.c62_w.pct": {
+        "color": "khaki",
+        "label": "Silt cont.",
+        "unit": "percent"
+      }
+    },
+    "singles": {
+      "apply": true,
+      "figSize": {
+        "x": 8,
+        "y": 6
+      }
+    },
+    "columns": {
+      "apply": true,
+      "ncolumns": 3,
+      "figSize": {
+        "x": 8,
+        "y": 8
+      }
+    },
+    "screenDraw": true,
+    "savePng": true
+  }
+}

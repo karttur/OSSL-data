@@ -1,0 +1,5 @@
+# OSSL LUCAS Sweden machine learning modeling
+
+#/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS/arranged-data/json-ml-modeling/model-ossl-spectra_sweden-LUCAS_nir_460-1050_10.json
+
+/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS/arranged-data/json-ml-modeling/columnplotmodel-ossl-spectra_sweden-LUCAS_nir_460-1050_10.json

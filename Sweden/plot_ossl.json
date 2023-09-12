@@ -1,0 +1,8 @@
+{
+  "rootpath": "/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS",
+  "sourcedatafolder": "data",
+  "arrangeddatafolder": "arranged-data",
+  "jsonfolder": "json-plots",
+  "projFN": "plot_spectra.txt",
+  "createjsonparams": false
+}
