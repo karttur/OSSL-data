@@ -1,8 +1,0 @@
-{
-  "rootpath": "/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS",
-  "sourcedatafolder": "data",
-  "projFN": "ml-model_spectra.txt",
-  "arrangeddatafolder": "arranged-data",
-  "jsonpath": "json-ml-modeling",
-  "createjsonparams": false
-}

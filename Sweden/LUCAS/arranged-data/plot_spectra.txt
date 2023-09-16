@@ -1,3 +1,3 @@
 # OSSL LUCAS Sweden soillines
 
-/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS/arranged-data/json-plots/plot-OSSL-LUCAS-SE_nir_460-1050_10.json
+/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS/arranged-data/json-plots/plot-OSSL-LUCAS-SE_nir_460-1050_5.json

@@ -1,8 +1,0 @@
-{
-  "rootpath": "/Users/thomasgumbricht/docs-local/OSSL/Sweden/LUCAS",
-  "sourcedatafolder": "data",
-  "arrangeddatafolder": "arranged-data",
-  "jsonfolder": "json-import",
-  "projFN": "extract_rawdata.txt",
-  "createjsonparams": false
-}
