@@ -12,8 +12,8 @@ This repo (https://github.com/karttur/OSSL-data) contains processed data over Sw
 
 The processed data over Sweden is available in 2 files:
 
-- [/Sweden/LUCAS/arranged-data/visnir/params-visnir_LUCAS_460-1050_10.json](https://github.com/karttur/OSSL-data/tree/main/Sweden/LUCAS/arranged-data/visnir/params-visnir_LUCAS_460-1050_10.json)
-- [/Sweden/LUCAS/arranged-data/visnir/data-visnir_LUCAS_460-1050_10.json](https://github.com/karttur/OSSL-data/tree/main/Sweden/LUCAS/arranged-data/visnir/daat-visnir_LUCAS_460-1050_10.json).
+- [/Sweden/LUCAS/arranged-data/visnir/params-visnir_LUCAS_460-1050_10.json](https://github.com/karttur/OSSL-data/tree/main/Sweden/LUCAS/arranged-data/visnir/OSSL-LUCAS-SE_460-1050_10)
+- [/Sweden/LUCAS/arranged-data/visnir/data-visnir_LUCAS_460-1050_10.json](https://github.com/karttur/OSSL-data/tree/main/Sweden/LUCAS/arranged-data/visnir/OSSL-LUCAS-SE_460-1050_10).
 
 ### Creating processed data from an OSSL data download
 
