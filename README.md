@@ -129,7 +129,7 @@ The OSSL data over Sweden contain both spectra and wet laboratory result for a d
 1. Clone of download this repo,
 2. Edit the following files:
 - /ml-model_ossl.json
-- /Sweden/LUCASml-model_spectra.txt
+- /Sweden/LUCAS/ml-model_spectra.txt
 - /Sweden/LUCAS/arranged-data/json-ml-modeling/plot-OSSL-LUCAS-SE_nir_460-1050_10.json
 
 The script "OSSL_mlmodel.py" requires one parameter, the local path to the file "model_ossl.json". "model_ossl.json" defines the local folder and file paths for the source and target data:
@@ -162,7 +162,7 @@ This file is downloaded with this repo, and you need to edit the paths also in t
 ```
 # OSSL LUCAS Sweden machine learning modeling
 
-Local/path/to/OSSL/OSSL/Sweden/LUCAS/arranged-data/json-ml-modeling/model-OSSL-LUCAS-SE_nir_460-1050_10.json
+Local/path/to/OSSL/Sweden/LUCAS/arranged-data/json-ml-modeling/model-OSSL-LUCAS-SE_nir_460-1050_10.json
 ```
 
 The project file for modelling soil properties from spectral data in this example links to a single json model command file.
