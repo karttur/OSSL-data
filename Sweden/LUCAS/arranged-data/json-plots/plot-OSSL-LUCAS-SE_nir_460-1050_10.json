@@ -13,9 +13,9 @@
     "geoRegion": "Sweden"
   },
   "input": {
-    "jsonSpectraDataFilePath": "Local/path/to/OSSL/Sweden/LUCAS/arranged-data/visnir/OSSL-LUCAS-SE_460-1050_10/data-visnir_LUCAS_460-1050_10.json",
+    "jsonSpectraDataFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/data-visnir_LUCAS_460-1050_10.json",
 
-    "jsonSpectraParamsFilePath": "Local/path/to/OSSL/Sweden/LUCAS/arranged-data/visnir/OSSL-LUCAS-SE_460-1050_10/params-visnir_LUCAS_460-1050_10.json"
+    "jsonSpectraParamsFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/params-visnir_LUCAS_460-1050_10.json"
   },
   "spectraPlot": {
     "apply": true,

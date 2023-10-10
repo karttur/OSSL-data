@@ -4,5 +4,6 @@
   "projFN": "ml-model_spectra.txt",
   "arrangeddatafolder": "arranged-data",
   "jsonpath": "json-ml-modeling",
+  "targetfeaturesymbols" :"/Local/path/to/targetfeaturesymbols.json",
   "createjsonparams": false
 }

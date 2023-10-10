@@ -1,3 +1,3 @@
 # OSSL LUCAS Sweden machine learning modeling
 
-Local/path/to/OSSL/OSSL/Sweden/LUCAS/arranged-data/json-ml-modeling/model-OSSL-LUCAS-SE_nir_460-1050_10.json
+model-OSSL-LUCAS-SE_nir_460-1050_10.json

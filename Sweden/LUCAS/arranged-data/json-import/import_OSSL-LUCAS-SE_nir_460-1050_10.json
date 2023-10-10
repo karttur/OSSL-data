@@ -12,7 +12,7 @@
     "units": "fraction",
     "geoRegion": "Sweden"
   },
-  "rootFP": "/Local/path/to/OSSL/Sweden/LUCAS",
+  "rootFP": ".",
   "visnir": {
     "apply": true,
     "subFP": "visnir",

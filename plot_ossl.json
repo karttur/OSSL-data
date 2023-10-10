@@ -4,5 +4,6 @@
   "arrangeddatafolder": "arranged-data",
   "jsonfolder": "json-plots",
   "projFN": "plot_spectra.txt",
+  "targetfeaturesymbols" :"/Local/path/to/targetfeaturesymbols.json",
   "createjsonparams": false
 }
