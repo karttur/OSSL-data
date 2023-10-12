@@ -1,9 +1,9 @@
 {
-  "rootpath": "/Local/path/to/OSSL/Sweden/LUCAS",
+  "rootpath": "/local/path/to/OSSL/Sweden/LUCAS",
   "sourcedatafolder": "data",
   "projFN": "ml-model_spectra.txt",
   "arrangeddatafolder": "arranged-data",
-  "jsonpath": "json-ml-modeling",
-  "targetfeaturesymbols" :"/Local/path/to/targetfeaturesymbols.json",
+  "jsonfolder": "json-ml-modeling",
+  "targetfeaturesymbols" :"/local/path/to/targetfeaturesymbols.json",
   "createjsonparams": false
 }

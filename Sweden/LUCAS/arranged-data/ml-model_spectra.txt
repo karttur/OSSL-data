@@ -1,3 +1,9 @@
 # OSSL LUCAS Sweden machine learning modeling
 
+model-OSSL-LUCAS-SE_nir_460-1050_2.json
+
+model-OSSL-LUCAS-SE_nir_460-1050_5.json
+
 model-OSSL-LUCAS-SE_nir_460-1050_10.json
+
+model-OSSL-LUCAS-SE_nir_460-1050_20.json

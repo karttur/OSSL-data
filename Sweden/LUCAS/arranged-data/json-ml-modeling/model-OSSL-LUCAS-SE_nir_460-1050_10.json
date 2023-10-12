@@ -14,10 +14,10 @@
     "geoRegion": "Sweden"
   },
   "input": {
-    "jsonSpectraDataFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/data-visnir_LUCAS_460-1050_10.json",
-    "jsonSpectraParamsFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/params-visnir_LUCAS_460-1050_10.json",
-    "hyperParameterRandomTuning": "Local/path/to/json-ml-modeling/hyper-param-random-tuning.json",
-    "hyperParameterExhaustiveTuning": "Local/path/to/json-ml-modeling/hyper-param-exhaustive-tuning.json"
+    "jsonSpectraDataFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/data-visnir_460-1050_10.json",
+    "jsonSpectraParamsFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/params-visnir_460-1050_10.json",
+    "hyperParameterRandomTuning": "/local/path/to/json-ml-modeling/hyper-param-random-tuning.json",
+    "hyperParameterExhaustiveTuning": "/local/path/to/json-ml-modeling/hyper-param-exhaustive-tuning.json"
   },
   "output": {
     "prefix": "testtg",
@@ -230,11 +230,11 @@
       "hyperParams": {}
     },
     "Huber": {
-      "apply": false,
+      "apply": true,
       "hyperParams": {}
     },
     "KnnRegr": {
-      "apply": false,
+      "apply": true,
       "hyperParams": {}
     },
     "DecTreeRegr": {
@@ -242,7 +242,7 @@
       "hyperParams": {}
     },
     "SVR": {
-      "apply": false,
+      "apply": true,
       "hyperParams": {
         "kernel": "linear",
         "C": 1.5,
@@ -256,7 +256,7 @@
       }
     },
     "MLP": {
-      "apply": false,
+      "apply": true,
       "hyperParams": {
         "hidden_layer_sizes": [
           100,
@@ -303,7 +303,7 @@
     }
   },
   "modelTests": {
-    "apply": true,
+    "apply": false,
     "trainTest": {
       "apply": true,
       "testSize": 0.3,
@@ -312,7 +312,7 @@
     },
     "Kfold": {
       "apply": true,
-      "folds": 10,
+      "folds": 5,
       "plot": true,
       "marker": "."
     }
@@ -338,7 +338,7 @@
         "xadd": 0.1,
         "yadd": 0.1
       },
-      "screenShow": true,
+      "screenShow": false,
       "savePng": true,
       "targetFeatures": {
         "apply": true,

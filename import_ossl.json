@@ -1,5 +1,5 @@
 {
-  "rootpath": "/Local/path/to/OSSL/Sweden/LUCAS",
+  "rootpath": "/local/path/to/OSSL/Sweden/LUCAS",
   "sourcedatafolder": "data",
   "arrangeddatafolder": "arranged-data",
   "jsonfolder": "json-import",

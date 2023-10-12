@@ -1,9 +1,9 @@
 {
-  "rootpath": "/Local/path/to/OSSL/Sweden/LUCAS",
+  "rootpath": "/local/path/to/OSSL/Sweden/LUCAS",
   "sourcedatafolder": "data",
   "arrangeddatafolder": "arranged-data",
   "jsonfolder": "json-plots",
   "projFN": "plot_spectra.txt",
-  "targetfeaturesymbols" :"/Local/path/to/targetfeaturesymbols.json",
+  "targetfeaturesymbols" :"/local/path/to/targetfeaturesymbols.json",
   "createjsonparams": false
 }
