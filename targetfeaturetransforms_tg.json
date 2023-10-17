@@ -1,0 +1,123 @@
+{
+  "targetFeatureStandardise": {
+    "caco3_usda.a54_w.pct": true,
+    "cec_usda.a723_cmolc.kg": true,
+    "cf_usda.c236_w.pct": false,
+    "clay.tot_usda.a334_w.pct": false,
+    "ec_usda.a364_ds.m": false,
+    "k.ext_usda.a725_cmolc.kg": false,
+    "n.tot_usda.a623_w.pct": false,
+    "oc_usda.c729_w.pct": false,
+    "p.ext_usda.a274_mg.kg": false,
+    "ph.cacl2_usda.a481_index": false,
+    "ph.h2o_usda.a268_index": false,
+    "sand.tot_usda.c60_w.pct": false,
+    "silt.tot_usda.c62_w.pct": false
+  },
+  "targetFeatureTransform": {
+    "caco3_usda.a54_w.pct": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "cec_usda.a723_cmolc.kg": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "cf_usda.c236_w.pct": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "clay.tot_usda.a334_w.pct": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "ec_usda.a364_ds.m": {
+      "log": true,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "k.ext_usda.a725_cmolc.kg": {
+      "log": true,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "n.tot_usda.a623_w.pct": {
+      "log": true,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "oc_usda.c729_w.pct": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "p.ext_usda.a274_mg.kg": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "ph.cacl2_usda.a481_index": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "ph.h2o_usda.a268_index": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "sand.tot_usda.c60_w.pct": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    },
+    "silt.tot_usda.c62_w.pct": {
+      "log": false,
+      "sqrt": false,
+      "reciprocal": false,
+      "boxcox": false,
+      "yeojohnson": false,
+      "quantile": false
+    }
+  }
+}

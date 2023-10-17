@@ -12,7 +12,7 @@
     },
     "cf_usda.c236_w.pct": {
       "color": "sienna",
-      "label": "Crane fraction",
+      "label": "Coarse fraction",
       "unit": "percent"
     },
     "clay.tot_usda.a334_w.pct": {

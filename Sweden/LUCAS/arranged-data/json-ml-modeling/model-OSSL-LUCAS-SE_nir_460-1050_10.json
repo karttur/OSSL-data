@@ -220,7 +220,7 @@
   },
   "regressionModels": {
     "OLS": {
-      "apply": true,
+      "apply": false,
       "hyperParams": {
         "fit_intercept": false
       }
