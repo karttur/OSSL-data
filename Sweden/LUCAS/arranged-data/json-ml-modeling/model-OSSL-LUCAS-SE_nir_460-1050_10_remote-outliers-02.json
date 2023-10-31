@@ -1,0 +1,310 @@
+{
+  "verbose": 1,
+  "id": "Sweden_LUCAS_460-1050_10_20230808",
+  "name": "Sweden_LUCAS_460-1050_10",
+  "userId": "thomasg",
+  "importVersion": "OSSL-202308",
+  "campaign": {
+    "campaignId": "OSSL-LUCAS-SE",
+    "campaignShortId": "OSSL-LUCAS-SE",
+    "campaignType": "laboratory",
+    "theme": "soil",
+    "product": "diffuse reflectance",
+    "units": "fraction",
+    "geoRegion": "Sweden"
+  },
+  "input": {
+    "jsonSpectraDataFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/data-visnir_460-1050_10.json",
+    "jsonSpectraParamsFilePath": "./visnir/OSSL-LUCAS-SE_460-1050_10/params-visnir_460-1050_10.json",
+    "targetfeaturetransforms": "/Users/thomasgumbricht/docs-local/OSSL2/targetfeaturetransforms_tg.json",
+    "hyperParameterRandomTuning": "Local/path/to/json-ml-modeling/hyper-param-random-tuning.json",
+    "hyperParameterExhaustiveTuning": "Local/path/to/json-ml-modeling/hyper-param-exhaustive-tuning.json"
+  },
+  "output": {
+    "prefix": "outliers-02",
+    "setdate": false
+  },
+  "targetFeatures": [
+    "n.tot_usda.a623_w.pct",
+    "oc_usda.c729_w.pct"
+  ],
+  "derivatives": {
+    "apply": false,
+    "join": false
+  },
+  "removeOutliers": {
+    "comment": "removes sample outliers based on spectra only - globally applied as preprocess",
+    "apply": true,
+    "detectorMethodList": [
+      "iforest (isolationforest)",
+      "ee (eenvelope,ellipticenvelope)",
+      "lof (lofactor,localoutlierfactor)",
+      "1csvm (1c-svm, oneclasssvm)"
+    ],
+    "detector": "1csvm",
+    "contamination": 0.2
+  },
+  "manualFeatureSelection": {
+    "comment": "Manual feature selection overrides other selection alternatives",
+    "apply": false
+  },
+  "globalFeatureSelection": {
+    "comment": [
+      "removes spectra with variance below given thresholds - globally applied as preprocess"
+    ],
+    "apply": false,
+    "scaler": "MinMaxScaler",
+    "varianceThreshold": {
+      "threshold": 0.025
+    }
+  },
+  "targetFeatureSelection": {
+    "comment": [
+      "feature selection using target data"
+    ],
+    "apply": true,
+    "univariateSelection": {
+      "apply": true,
+      "SelectKBest": {
+        "apply": true,
+        "n_features": 20
+      },
+      "selectPercentile": {
+        "implemented": false,
+        "apply": false,
+        "percentile": 10
+      },
+      "genericUnivariateSelect": {
+        "implemented": false,
+        "apply": false,
+        "hyperParameters": {}
+      }
+    }
+  },
+  "modelFeatureSelection": {
+    "comment": [
+      "feature selection using target + regressor"
+    ],
+    "apply": false,
+    "permutationSelector": {
+      "apply": false,
+      "permutationRepeats": 6,
+      "n_features_to_select": 8,
+      "step": 1
+    },
+    "RFE": {
+      "apply": false,
+      "CV": false,
+      "n_features_to_select": 8,
+      "step": 1
+    }
+  },
+  "featureAgglomeration": {
+    "apply": false,
+    "agglomerativeClustering": {
+      "apply": false,
+      "implemented": false
+    },
+    "wardClustering": {
+      "apply": false,
+      "n_clusters": 0,
+      "affinity": "euclidean",
+      "tuneWardClustering": {
+        "apply": true,
+        "kfolds": 3,
+        "clusters": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    }
+  },
+  "hyperParameterTuning": {
+    "apply": false,
+    "fraction": 0.5,
+    "nIterSearch": 6,
+    "n_best_report": 3,
+    "randomTuning": {
+      "apply": false
+    },
+    "exhaustiveTuning": {
+      "apply": false
+    }
+  },
+  "featureImportance": {
+    "apply": true,
+    "reportMaxFeatures": 8,
+    "permutationRepeats": 10
+  },
+  "modelling": {
+    "apply": true
+  },
+  "regressionModels": {
+    "OLS": {
+      "apply": true,
+      "hyperParams": {
+        "fit_intercept": false
+      }
+    },
+    "TheilSen": {
+      "apply": false,
+      "hyperParams": {}
+    },
+    "Huber": {
+      "apply": false,
+      "hyperParams": {}
+    },
+    "KnnRegr": {
+      "apply": false,
+      "hyperParams": {}
+    },
+    "DecTreeRegr": {
+      "apply": false,
+      "hyperParams": {}
+    },
+    "SVR": {
+      "apply": false,
+      "hyperParams": {
+        "kernel": "linear",
+        "C": 1.5,
+        "epsilon": 0.05
+      }
+    },
+    "RandForRegr": {
+      "apply": true,
+      "hyperParams": {
+        "n_estimators": 30
+      }
+    },
+    "MLP": {
+      "apply": false,
+      "hyperParams": {
+        "hidden_layer_sizes": [
+          100,
+          100
+        ],
+        "max_iter": 200,
+        "tol": 0.001,
+        "epsilon": 1e-8
+      }
+    }
+  },
+  "regressionModelSymbols": {
+    "OLS": {
+      "marker": ".",
+      "size": 100
+    },
+    "TheilSen": {
+      "marker": "v",
+      "size": 50
+    },
+    "Huber": {
+      "marker": "^",
+      "size": 50
+    },
+    "KnnRegr": {
+      "marker": "s",
+      "size": 50
+    },
+    "DecTreeRegr": {
+      "marker": "P",
+      "size": 50
+    },
+    "SVR": {
+      "marker": "*",
+      "size": 50
+    },
+    "RandForRegr": {
+      "marker": "h",
+      "size": 50
+    },
+    "MLP": {
+      "marker": "D",
+      "size": 50
+    }
+  },
+  "modelTests": {
+    "apply": true,
+    "trainTest": {
+      "apply": false,
+      "testSize": 0.3,
+      "plot": true,
+      "marker": "s"
+    },
+    "Kfold": {
+      "apply": true,
+      "folds": 10,
+      "plot": true,
+      "marker": "."
+    }
+  },
+  "plot": {
+    "tightLayout": false,
+    "singles": {
+      "apply": true,
+      "figSize": {
+        "x": 0,
+        "y": 0,
+        "xadd": 0.25,
+        "yadd": 0.25
+      },
+      "screenShow": false,
+      "savePng": true
+    },
+    "rows": {
+      "apply": true,
+      "subFigSize": {
+        "x": 3,
+        "y": 3,
+        "xadd": 0.1,
+        "yadd": 0.1
+      },
+      "screenShow": false,
+      "savePng": true,
+      "targetFeatures": {
+        "apply": true,
+        "figSize": {
+          "x": 0,
+          "y": 0,
+          "xadd": 0,
+          "yadd": 0
+        },
+        "hwspace": {
+          "hspace": 0.25,
+          "wspace": 0.25
+        },
+        "columns": [
+          "permutationImportance",
+          "featureImportance",
+          "Kfold"
+        ]
+      },
+      "regressionModels": {
+        "apply": true,
+        "figSize": {
+          "x": 0,
+          "y": 0,
+          "xadd": 0.25,
+          "yadd": 0.25
+        },
+        "hwspace": {
+          "hspace": 0.25,
+          "wspace": 0.25
+        },
+        "columns": [
+          "permutationImportance",
+          "Kfold"
+        ]
+      }
+    }
+  }
+}

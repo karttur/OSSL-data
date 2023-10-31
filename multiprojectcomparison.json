@@ -1,0 +1,118 @@
+{
+  "apply": true,
+  "prefix": "otlier-comp-test",
+  "trialid": {
+    "0": "no outliers",
+    "1": "outliers 0.1",
+    "2": "outliers 0.2",
+    "3": "outliers 0.3",
+    "4": "fyra",
+    "5": "fem",
+    "6": "sex"
+  },
+  "comment": "if set to true targetFeatures and regressionModels override the settings in each json command file for modeling",
+  "targetFeatures": [
+    "n.tot_usda.a623_w.pct",
+    "oc_usda.c729_w.pct"
+  ],
+  "removeOutliers": {
+    "apply": true
+  },
+  "manualFeatureSelection": {
+    "apply": false
+  },
+  "globalFeatureSelection": {
+    "apply": false
+  },
+  "targetFeatureSelection": {
+    "apply": false
+  },
+  "modelFeatureSelection": {
+    "apply": false
+  },
+  "featureAgglomeration": {
+    "apply": false
+  },
+  "hyperParameterTuning": {
+    "apply": false,
+    "fraction": 0.5,
+    "nIterSearch": 6,
+    "n_best_report": 3,
+    "randomTuning": {
+      "apply": false
+    },
+    "exhaustiveTuning": {
+      "apply": false
+    }
+  },
+  "featureImportance": {
+    "apply": true,
+    "reportMaxFeatures": 4,
+    "permutationRepeats": 10,
+    "coefficientImportance": {
+      "apply": true
+    },
+    "permutationImportance": {
+      "apply": true
+    }
+  },
+  "modelling": {
+    "apply": true
+  },
+  "regressionModels": {
+    "OLS": {
+      "apply": true
+    },
+    "TheilSen": {
+      "apply": false
+    },
+    "Huber": {
+      "apply": false
+    },
+    "KnnRegr": {
+      "apply": false
+    },
+    "DecTreeRegr": {
+      "apply": false
+    },
+    "SVR": {
+      "apply": false
+    },
+    "RandForRegr": {
+      "apply": true
+    },
+    "MLP": {
+      "apply": false
+    }
+  },
+  "modelTests": {
+    "apply": true,
+    "trainTest": {
+      "apply": false,
+      "testSize": 0.3,
+      "plot": true,
+      "marker": "s"
+    },
+    "Kfold": {
+      "apply": true,
+      "folds": 10,
+      "plot": true,
+      "marker": "."
+    }
+  },
+  "plot": {
+    "tightLayout": false,
+    "screenShow": false,
+    "savePng": true,
+    "figSize": {
+      "x": 0,
+      "y": 0,
+      "xadd": 0.25,
+      "yadd": 0.25
+    },
+    "hwspace": {
+      "hspace": 0.25,
+      "wspace": 0.25
+    }
+  }
+}

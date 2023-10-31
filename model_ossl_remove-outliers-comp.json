@@ -1,0 +1,11 @@
+{
+  "rootpath": "/Users/thomasgumbricht/docs-local/OSSL2/Sweden/LUCAS",
+  "sourcedatafolder": "data",
+  "projFN": [
+    "ml-model_spectra_remove-outliers-comp.json"
+  ],
+  "arrangeddatafolder": "arranged-data",
+  "jsonfolder": "json-ml-modeling",
+  "targetfeaturesymbols": "/Users/thomasgumbricht/docs-local/OSSL2/targetfeaturesymbols.json",
+  "createjsonparams": false
+}

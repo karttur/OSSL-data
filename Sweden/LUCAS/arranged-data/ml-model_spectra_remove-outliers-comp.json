@@ -1,0 +1,9 @@
+{
+  "projectFiles": [
+    "model-OSSL-LUCAS-SE_nir_460-1050_10_remote-outliers-00.json",
+    "model-OSSL-LUCAS-SE_nir_460-1050_10_remote-outliers-01.json",
+    "model-OSSL-LUCAS-SE_nir_460-1050_10_remote-outliers-02.json",
+    "model-OSSL-LUCAS-SE_nir_460-1050_10_remote-outliers-03.json"
+  ],
+  "multiprojectcomparison": "/Users/thomasgumbricht/docs-local/OSSL2/multiprojectcomparison.json"
+}
