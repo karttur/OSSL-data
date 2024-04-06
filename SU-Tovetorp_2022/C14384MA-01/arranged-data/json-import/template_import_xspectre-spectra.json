@@ -1,0 +1,37 @@
+{
+  "verbose": 1,
+  "id": "auto",
+  "name": "auto",
+  "userId": "youruserid - any for now",
+  "importVersion": "importxspectrev080",
+  "campaign": {
+    "campaignId": "OSSL-region-etc",
+    "campaignShortId": "OSSL-xyz",
+    "campaignType": "laboratory",
+    "theme": "soil",
+    "product": "diffuse reflectance",
+    "units": "fraction",
+    "geoRegion": "Sweden"
+  },
+  "rootFP": "/path/to/folder/with/ossl/download",
+  "whiteReference": "whiteRef.csv",
+  "whiteReferenceFactor": 1.0,
+  "soilSample": {
+    "minDepth": 0,
+    "maxDepth": 100
+  },
+  "xspectrolum": {
+    "apply": true,
+    "subFP": "visnir",
+    "beginWaveLength": 460,
+    "endWaveLength": 1050,
+    "outputBandWidth": 10
+  },
+  "mode": "default",
+  "version": "",
+  "prepcode": "",
+  "scan": "",
+  "getlist": "glob",
+  "listPath": "",
+  "pattern": ".json"
+}

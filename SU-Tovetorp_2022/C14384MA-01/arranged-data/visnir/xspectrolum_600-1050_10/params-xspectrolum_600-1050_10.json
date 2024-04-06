@@ -1,0 +1,110 @@
+{
+  "verbose": 1,
+  "name": "xspectre-Tovetorp-C14384MA",
+  "userId": "thomasg",
+  "importVersion": "importxspectrev080",
+  "importsource": "xspectrev080",
+  "singlefiles": false,
+  "dataset": "Tovetorp-C14384MA-01",
+  "campaign": {
+    "campaignId": "xspectre-Tovetorp-C14384MA",
+    "campaignShortId": "xspectre-Tovetorp-C14384MA",
+    "campaignType": "laboratory",
+    "theme": "soil",
+    "product": "diffuse reflectance",
+    "units": "fraction",
+    "geoRegion": "Sweden"
+  },
+  "rootFP": ".",
+  "whiteReference": {
+    "rootFP": ".",
+    "filename": "whiteref-11_c14384ma-01_raw-spectra_tovetorp2022-ngs-dried_20240109_soil.json",
+    "whiteReferenceFactor": 1
+  },
+  "soilSample": {
+    "minDepth": 0,
+    "maxDepth": 100
+  },
+  "xspectrolum": {
+    "apply": true,
+    "subFP": "visnir",
+    "beginWaveLength": 600,
+    "endWaveLength": 1050,
+    "outputBandWidth": 10
+  },
+  "mode": "default",
+  "version": "",
+  "sampleprepcode": "a0",
+  "scanmode": "s4",
+  "getList": "glob",
+  "listPath": "",
+  "pattern": "*tovetorp*",
+  "labData": {
+    "rootFP": ".",
+    "srcLabData": [
+      "BD+LOI",
+      "pH",
+      "P_K_Mg_Ca"
+    ],
+    "BD+LOI": {
+      "filepath": "data-lab/tovetorp-lab_BD60_BD105_LOI.csv",
+      "siteLocalId": "%(col0)s-%(col1)s",
+      "analysis": {
+        "col2": "BulkDensity_60C.mg_mm3",
+        "col3": "BulkDensity_105C.mg_mm3",
+        "col4": "C_LossOfIgnition.pct"
+      }
+    },
+    "pH": {
+      "filepath": "data-lab/tovetorp-lab_pH.csv",
+      "siteLocalId": "%(col0)s-%(col1)s",
+      "siteLocalIdAlt": "%(col0)s-%(col2)s",
+      "analysis": {
+        "col3": "pH.pH"
+      }
+    },
+    "P_K_Mg_Ca": {
+      "filepath": "data-lab/tovetorp-lab_P_K_Mg_Ca.csv",
+      "siteLocalId": "%(col0)s-%(col1)s",
+      "siteLocalIdAlt": "%(col0)s-%(col2)s",
+      "analysis": {
+        "col3": "P_AL.mg_100g-1",
+        "col4": "K_AL.mg_100g-1",
+        "col5": "Mg_AL.mg_100g-1",
+        "col6": "Ca_AL.mg_100g-1"
+      }
+    }
+  },
+  "campaignDstFP": {
+    "theme": "",
+    "campaignShortId": "",
+    "beginwl": "",
+    "endwl": "",
+    "bandwidth": "",
+    "suffix": ""
+  },
+  "subSampleNaming": {
+    "theme": "",
+    "origin": "",
+    "spectrometer": "",
+    "sampleId": "",
+    "location": "",
+    "samplePrep": "",
+    "profile": "",
+    "subSample": ""
+  },
+  "subSampleMeta": {
+    "sampleId": "",
+    "dataset": "",
+    "samplePrep": "",
+    "minDepth": "",
+    "maxDepth": "",
+    "subSample": "",
+    "sensorid": "",
+    "muzzleid": "",
+    "sampledate": "20240406",
+    "scandate": "20240406",
+    "registerdate": "20240406",
+    "instrument": ""
+  }
+}
