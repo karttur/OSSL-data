@@ -1,0 +1,13 @@
+{
+  "rootpath": "/Users/thomasgumbricht/docs-local/OSSL2/Sweden/LUCAS",
+  "sourcedatafolder": "data",
+  "projFN": [
+    "ml-model_meancentring-test.json"
+  ],
+  "arrangeddatafolder": "arranged-data",
+  "jsonfolder": "json-ml-modeling",
+  "targetfeaturesymbols": "/Users/thomasgumbricht/docs-local/OSSL2/plotlayouts/targetfeaturesymbols.json",
+  "regressionmodelsymbols": "/Users/thomasgumbricht/docs-local/OSSL2/plotlayouts/regressionmodelsymbols.json",
+  "modelplotlayout": "/Users/thomasgumbricht/docs-local/OSSL2/plotlayouts/modelplotlayout.json",
+  "createjsonparams": false
+}
