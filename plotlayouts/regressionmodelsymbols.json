@@ -1,0 +1,40 @@
+{
+  "regressionModelSymbols": {
+    "OLS": {
+      "marker": ".",
+      "size": 100
+    },
+    "TheilSen": {
+      "marker": "v",
+      "size": 50
+    },
+    "Huber": {
+      "marker": "^",
+      "size": 50
+    },
+    "KnnRegr": {
+      "marker": "s",
+      "size": 50
+    },
+    "DecTreeRegr": {
+      "marker": "P",
+      "size": 50
+    },
+    "SVR": {
+      "marker": "*",
+      "size": 50
+    },
+    "RandForRegr": {
+      "marker": "h",
+      "size": 50
+    },
+    "MLP": {
+      "marker": "D",
+      "size": 50
+    },
+    "Cubist": {
+      "marker": "D",
+      "size": 50
+    }
+  }
+}
