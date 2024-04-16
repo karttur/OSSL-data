@@ -1,0 +1,51 @@
+{
+  "enhancementPlotLayout": {
+    "filterExtraction": {
+      "apply": true,
+      "supTitle": "Filtering",
+      "subplotTitles": "auto",
+      "figSize": {
+        "x": 8,
+        "y": 8
+      },
+      "ylabels": [
+        "reflectance",
+        "reflectance"
+      ]
+    },
+    "scatterCorrection": {
+      "apply": true,
+      "supTitle": "Scatter correction OSSL data, Sweden",
+      "subplotTitles": "auto",
+      "ylabels": [
+        "reflectance",
+        "normalised reflectance",
+        "normalised reflectance"
+      ]
+    },
+    "standardisation": {
+      "apply": true,
+      "supTitle": "Scaled OSSL data, Sweden",
+      "subplotTitles": "auto",
+      "ylabels": [
+        "reflectance",
+        "standardised reflectance"
+      ]
+    },
+    "maxSpectra": 50,
+    "colorRamp": "jet",
+    "screenShow": false,
+    "savePng": true,
+    "tightLayout": true,
+    "subFigSize": {
+      "x": 3,
+      "y": 3,
+      "xadd": 0.1,
+      "yadd": 0.1
+    },
+    "hwspace": {
+      "hspace": 0.25,
+      "wspace": 0.25
+    }
+  }
+}

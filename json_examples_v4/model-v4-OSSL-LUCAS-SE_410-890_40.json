@@ -1,0 +1,339 @@
+{
+  "verbose": 2,
+  "id": "Sweden_LUCAS_410-890_40_20231121",
+  "name": "Sweden_LUCAS_410-890_40",
+  "userId": "thomasg",
+  "importVersion": "OSSL-202308",
+  "campaign": {
+    "campaignId": "OSSL-LUCAS-SE",
+    "campaignShortId": "OSSL-LUCAS-SE",
+    "campaignType": "laboratory",
+    "theme": "soil",
+    "product": "diffuse reflectance",
+    "units": "fraction",
+    "geoRegion": "Sweden"
+  },
+  "input": {
+    "jsonSpectraDataFilePath": "./visnir/OSSL-LUCAS-SE_410-890_40/data-visnir_410-890_40.json",
+    "jsonSpectraParamsFilePath": "./visnir/OSSL-LUCAS-SE_410-890_40/params-visnir_410-890_40.json",
+    "targetfeaturetransforms": "/Users/thomasgumbricht/docs-local/OSSL2/targettransform/targetfeaturetransforms_all-linear.json",
+    "hyperParameterRandomTuning": "Local/path/to/json-ml-modeling/hyper-param-random-tuning.json",
+    "hyperParameterExhaustiveTuning": "Local/path/to/json-ml-modeling/hyper-param-exhaustive-tuning.json"
+  },
+  "output": {
+    "prefix": "410-890_linear",
+    "setdate": false
+  },
+  "targetFeatures": [
+    "n.tot_usda.a623_w.pct",
+    "oc_usda.c729_w.pct"
+  ],
+  "spectraPreProcess": {
+    "filtering": {
+      "comment": "filter spectra using moving average, weighted kernel, Salitzy-Golay or Gaussian filter",
+      "apply": false,
+      "extraction": {
+        "mode": "endpoints",
+        "outputBandWidth": 100,
+        "beginWaveLength": 500,
+        "endWaveLength": 800
+      },
+      "movingaverage": {
+        "kernel": [
+          1,
+          1,
+          1
+        ],
+        "mode": "nearest"
+      },
+      "Gauss": {
+        "sigma": 0,
+        "mode": "nearest"
+      },
+      "SavitzkyGolay": {
+        "window_length": 0,
+        "polyorder": 2,
+        "deriv": 0,
+        "mode": "nearest"
+      }
+    },
+    "multifiltering": {
+      "comment": "filter spectra using moving average, weighted kernel, Salitzy-Golay or Gaussian filter",
+      "apply": false,
+      "mode": "noendpoints",
+      "beginWaveLength": [
+        675,
+        725
+      ],
+      "endWaveLength": [
+        725,
+        775
+      ],
+      "outputBandWidth": [
+        25,
+        10
+      ],
+      "movingaverage": {
+        "kernel": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "SavitzkyGolay": {
+        "window_length": [
+          0,
+          0
+        ]
+      },
+      "Gauss": {
+        "sigma": [
+          0,
+          0
+        ]
+      }
+    },
+    "duplicateSpectraCombine": "mean"
+  },
+  "collation": {
+    "comment": "dataset collation is automatic, no arguments rquired"
+  },
+  "datasetSplit": {
+    "testSize": 0.3
+  },
+  "spectraInfoEnhancement": {
+    "apply": true,
+    "scatterCorrection": {
+      "comment": "scattercorr can apply the following: norm-1 (l1), norm-2 (l2) norm-max (max), snv (snv) or msc (msc). If two are given they will be done in series using output from the first as input to the second",
+      "apply": true,
+      "scaler": [
+        "snv"
+      ]
+    },
+    "standardisation": {
+      "comment": "remove mean spectral signal and optionallay scale using e.g. standard deviation for each band, for z-score set both meancentring and unitscaling to true",
+      "apply": false,
+      "paretoscaling": false,
+      "poissonscaling": false,
+      "meancentring": true,
+      "unitscaling": false
+    },
+    "derivatives": {
+      "apply": false,
+      "derive": 1,
+      "join": false
+    },
+    "decompose": {
+      "comment": "Principal Component Analysis as a spectralpreparation process, you can also use PLSregression, with an inbuild decomposition",
+      "apply": false,
+      "pca": {
+        "apply": false,
+        "n_components": 3
+      }
+    }
+  },
+  "removeOutliers": {
+    "comment": "removes sample outliers",
+    "apply": true,
+    "modeList": [
+      "allcovariates",
+      "covarL",
+      "singleCovarTarget",
+      "NOTE: covarL can also contain target"
+    ],
+    "mode": "covarL",
+    "covarL": [
+      "650",
+      "target"
+    ],
+    "detectorMethodList": [
+      "iforest (isolationforest)",
+      "ee (eenvelope,ellipticenvelope)",
+      "lof (lofactor,localoutlierfactor)",
+      "1csvm (1c-svm, oneclasssvm)"
+    ],
+    "detector": "iforest",
+    "contamination": 0.1,
+    "random_state": 42
+  },
+  "manualFeatureSelection": {
+    "comment": "Manual feature selection overrides other selection alternatives",
+    "apply": false,
+    "spectra": [
+      "675",
+      "685",
+      "705",
+      "715",
+      "735"
+    ],
+    "derivatives": {
+      "firstWaveLength": [
+        "675"
+      ],
+      "lastWaveLength": [
+        "735"
+      ]
+    },
+    "components": []
+  },
+  "generalFeatureSelection": {
+    "comment": [
+      "removes spectra either using global threshold or agglomeration. Only one can be applied. Threshold has precedence if both are set."
+    ],
+    "apply": true,
+    "varianceThreshold": {
+      "apply": false,
+      "scaler": "MinMaxScaler",
+      "threshold": 0.01
+    },
+    "univariateSelection": {
+      "apply": false,
+      "SelectKBest": {
+        "apply": true,
+        "n_features": 5
+      }
+    },
+    "featureAgglomeration": {
+      "apply": false,
+      "agglomerativeClustering": {
+        "apply": false,
+        "implemented": false
+      },
+      "wardClustering": {
+        "apply": true,
+        "n_clusters": 4,
+        "affinity": "euclidean",
+        "tuneWardClustering": {
+          "apply": true,
+          "kfolds": 3,
+          "clusters": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      }
+    }
+  },
+  "specificFeatureSelection": {
+    "comment": [
+      "feature selection using target data and/or regressor"
+    ],
+    "apply": true,
+
+    "permutationSelector": {
+      "apply": false,
+      "permutationRepeats": 6,
+      "n_features_to_select": 5,
+      "step": 1
+    },
+    "RFE": {
+      "apply": true,
+      "CV": false,
+      "n_features_to_select": 5,
+      "step": 1
+    },
+    "treeBasedSelector": {
+      "apply": false,
+      "n_estimators": 50
+    }
+  },
+  "modelling": {
+    "apply": true,
+    "hyperParameterTuning": {
+      "apply": false,
+      "fraction": 0.5,
+      "nIterSearch": 6,
+      "n_best_report": 3,
+      "randomTuning": {
+        "apply": false
+      },
+      "exhaustiveTuning": {
+        "apply": false
+      }
+    },
+    "featureImportance": {
+      "apply": true,
+      "reportMaxFeatures": 8,
+      "permutationRepeats": 10,
+      "n_estimators": 50
+    },
+    "regressionModels": {
+      "OLS": {
+        "apply": false,
+        "hyperParams": {
+          "fit_intercept": false
+        }
+      },
+      "TheilSen": {
+        "apply": false,
+        "hyperParams": {}
+      },
+      "Huber": {
+        "apply": false,
+        "hyperParams": {}
+      },
+      "KnnRegr": {
+        "apply": false,
+        "hyperParams": {}
+      },
+      "DecTreeRegr": {
+        "apply": false,
+        "hyperParams": {}
+      },
+      "SVR": {
+        "apply": false,
+        "hyperParams": {
+          "kernel": "linear",
+          "C": 1.5,
+          "epsilon": 0.05
+        }
+      },
+      "RandForRegr": {
+        "apply": true,
+        "hyperParams": {
+          "n_estimators": 30
+        }
+      },
+      "MLP": {
+        "apply": false,
+        "hyperParams": {
+          "hidden_layer_sizes": [
+            100,
+            100
+          ],
+          "max_iter": 200,
+          "tol": 0.001,
+          "epsilon": 1e-8
+        }
+      },
+      "Cubist": {
+        "apply": true,
+        "hyperParams": {}
+      },
+      "PLS": {
+        "apply": false,
+        "hyperParams": {}
+      }
+    },
+    "modelTests": {
+      "apply": true,
+      "trainTest": {
+        "apply": true
+      },
+      "Kfold": {
+        "apply": false
+      }
+    }
+  }
+}

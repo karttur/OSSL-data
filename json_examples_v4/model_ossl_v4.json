@@ -1,0 +1,14 @@
+{
+  "rootpath": "/Users/thomasgumbricht/docs-local/OSSL2/Sweden/LUCAS",
+  "sourcedatafolder": "data",
+  "projFN": [
+    "ml-model_v4.json"
+  ],
+  "arrangeddatafolder": "arranged-data",
+  "jsonfolder": "json-ml-modeling",
+  "targetfeaturesymbols": "/Users/thomasgumbricht/docs-local/OSSL2/plotlayouts/targetfeaturesymbols.json",
+  "regressionmodelsymbols": "/Users/thomasgumbricht/docs-local/OSSL2/plotlayouts/regressionmodelsymbols.json",
+  "modelplot": "/Users/thomasgumbricht/docs-local/OSSL2/plotlayouts/modelplot.json",
+  "enhancementplotlayout": "/Users/thomasgumbricht/docs-local/OSSL2/plotlayouts/enhancementplotlayout.json",
+  "createjsonparams": false
+}
