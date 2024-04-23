@@ -2,7 +2,7 @@
   "rootpath": "/Users/thomasgumbricht/docs-local/OSSL2/Sweden/LUCAS",
   "sourcedatafolder": "data",
   "projFN": [
-    "ml-model_v4.json"
+    "ml-model_v4_multicomp.json"
   ],
   "arrangeddatafolder": "arranged-data",
   "jsonfolder": "json-ml-modeling",

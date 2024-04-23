@@ -1,0 +1,161 @@
+{
+  "apply": true,
+  "prefix": "spectra-vs-derivative",
+  "trialid": {
+    "0": "spectra",
+    "1": "derivative"
+  },
+  "comment": "if set to true targetFeatures and regressionModels override the settings in each json command file for modeling",
+  "targetFeatures": [
+    "n.tot_usda.a623_w.pct",
+    "oc_usda.c729_w.pct"
+  ],
+  "spectraPreProcess": {
+    "apply": false,
+    "filtering": {
+      "apply": false
+    },
+    "multifiltering": {
+      "apply": false
+    }
+  },
+  "spectraInfoEnhancement": {
+    "apply": true,
+    "scatterCorrection": {
+      "apply": true
+    },
+    "standardisation": {
+      "apply": true
+    },
+    "derivatives": {
+      "apply": false
+    },
+    "decompose": {
+      "apply": false,
+      "pca": {
+        "apply": true
+      }
+    }
+  },
+  "manualFeatureSelection": {
+    "apply": false
+  },
+  "generalFeatureSelection": {
+    "apply": false,
+    "varianceThreshold": {
+      "apply": false
+    }
+  },
+  "removeOutliers": {
+    "apply": false
+  },
+  "specificFeatureAgglomeration": {
+    "apply": false,
+    "wardClustering": {
+      "apply": false
+    }
+  },
+  "specificFeatureSelection": {
+    "apply": true,
+    "univariateSelection": {
+      "apply": true
+    },
+    "permutationSelector": {
+      "apply": true
+    },
+    "RFE": {
+      "apply": true
+    },
+    "treeBasedSelector": {
+      "apply": false
+    }
+  },
+  "modelling": {
+    "apply": true,
+    "hyperParameterTuning": {
+      "apply": false,
+      "fraction": 0.5,
+      "nIterSearch": 6,
+      "n_best_report": 3,
+      "randomTuning": {
+        "apply": false
+      },
+      "exhaustiveTuning": {
+        "apply": false
+      }
+    },
+    "featureImportance": {
+      "apply": true,
+      "reportMaxFeatures": 4,
+      "permutationRepeats": 10,
+      "coefficientImportance": {
+        "apply": true
+      },
+      "permutationImportance": {
+        "apply": true
+      },
+      "treeBasedImportance": {
+        "apply": true
+      }
+    },
+    "regressionModels": {
+      "OLS": {
+        "apply": true
+      },
+      "TheilSen": {
+        "apply": false
+      },
+      "Huber": {
+        "apply": false
+      },
+      "KnnRegr": {
+        "apply": false
+      },
+      "DecTreeRegr": {
+        "apply": false
+      },
+      "SVR": {
+        "apply": false
+      },
+      "RandForRegr": {
+        "apply": true
+      },
+      "MLP": {
+        "apply": false
+      },
+      "Cubist": {
+        "apply": false
+      },
+      "PLS": {
+        "apply": false
+      }
+    },
+    "modelTests": {
+      "apply": true,
+      "trainTest": {
+        "apply": true,
+        "marker": "s"
+      },
+      "Kfold": {
+        "apply": false,
+        "folds": 10,
+        "marker": "."
+      }
+    }
+  },
+  "plot": {
+    "tightLayout": false,
+    "screenShow": false,
+    "savePng": true,
+    "figSize": {
+      "x": 0,
+      "y": 0,
+      "xadd": 0.25,
+      "yadd": 0.25
+    },
+    "hwspace": {
+      "hspace": 0.25,
+      "wspace": 0.25
+    }
+  }
+}

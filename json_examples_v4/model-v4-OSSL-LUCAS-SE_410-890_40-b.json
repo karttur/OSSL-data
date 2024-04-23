@@ -29,7 +29,6 @@
     "oc_usda.c729_w.pct"
   ],
   "spectraPreProcess": {
-    "apply": false,
     "filtering": {
       "comment": "filter spectra using moving average, weighted kernel, Salitzy-Golay or Gaussian filter",
       "apply": false,
@@ -136,7 +135,7 @@
       "unitscaling": false
     },
     "derivatives": {
-      "apply": false,
+      "apply": true,
       "derive": 1,
       "join": false
     },
